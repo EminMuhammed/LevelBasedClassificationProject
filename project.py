@@ -73,7 +73,26 @@ valuecount(df, "PRICE")
 sns.countplot(x=df["PRICE"], data=df)
 plt.show()
 
+##################################
+# SORU 5- Hangi ülkeden kaçar tane satış olmuş?
+##################################
+df["COUNTRY"].value_counts()
+# or
+valuecount(df, "COUNTRY")
 
+sns.countplot(x=df["COUNTRY"], hue=df["SEX"], data=df)
+plt.show()
+
+##################################
+# SORU 6- Ülkelere göre satışlardan toplam ne kadar kazanılmış?
+##################################
+df.groupby("COUNTRY").agg({"PRICE": "sum"})
+df.groupby("COUNTRY").agg({"PRICE":lambda x: x.sum()})
+
+##################################
+# SORU 7- SOURCE türlerine göre göre satış sayıları nedir?
+##################################
+df.groupby("SOURCE").agg({"PRICE": "sum"})
 
 
 
