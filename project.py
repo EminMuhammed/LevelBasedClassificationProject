@@ -64,6 +64,14 @@ valuecount(df, "PRICE")
 # or
 df["PRICE"].nunique()
 
+##################################
+# SORU 4- Hangi PRICE'dan kaçar tane satış gerçekleşmiş?
+##################################
+df["PRICE"].value_counts()
+valuecount(df, "PRICE")
+
+sns.countplot(x=df["PRICE"], data=df)
+plt.show()
 
 
 
