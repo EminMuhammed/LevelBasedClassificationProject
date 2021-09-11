@@ -54,3 +54,26 @@ df["SOURCE"].nunique()
 df["SOURCE"].value_counts()
 # or
 valuecount(df, "SOURCE")
+
+###################################
+# SORU 3- Kaç unique PRICE vardır?
+###################################
+len(df["PRICE"].unique())
+# or
+valuecount(df, "PRICE")
+# or
+df["PRICE"].nunique()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
