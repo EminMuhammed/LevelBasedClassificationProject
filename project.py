@@ -94,13 +94,18 @@ df.groupby("COUNTRY").agg({"PRICE":lambda x: x.sum()})
 ##################################
 df.groupby("SOURCE").agg({"PRICE": "sum"})
 
+##################################
+# SORU 8- Ülkelere göre PRICE ortalamaları nedir
+##################################
+df.groupby("COUNTRY").agg({"PRICE": "mean"})
 
+##################################
+# SORU 9- SOURCE'lara göre PRICE ortalamaları nedir
+##################################
+df.groupby("SOURCE").agg({"PRICE": "mean"})
 
-
-
-
-
-
-
-
+##################################
+# SORU 10- COUNTRY-SOURCE kırılımında PRICE ortalamaları nedir?
+##################################
+df.groupby(["SOURCE", "COUNTRY"]).agg({"PRICE": "mean"})
 
